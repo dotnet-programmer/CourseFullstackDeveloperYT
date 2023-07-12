@@ -38,14 +38,14 @@ static void ShowMainMenu()
 {
 	Console.Clear();
 	Console.WriteLine("Contacts application.");
-    Console.WriteLine();
-    Console.WriteLine("1) Add new contact");
+	Console.WriteLine();
+	Console.WriteLine("1) Add new contact");
 	Console.WriteLine("2) Display contact by number");
 	Console.WriteLine("3) Display all contacts");
 	Console.WriteLine("4) Find contacts by name");
 	Console.WriteLine("5) Delete contact by number");
-    Console.WriteLine();
-    Console.WriteLine("Any other key to exit");
+	Console.WriteLine();
+	Console.WriteLine("Any other key to exit");
 }
 
 void AddContact()
@@ -69,8 +69,8 @@ string GetName()
 		{
 			return input;
 		}
-        Console.WriteLine("Name is too short!");
-    }
+		Console.WriteLine("Name is too short!");
+	}
 }
 
 void DisplayContactByNumber()

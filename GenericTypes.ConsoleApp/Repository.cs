@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace GenericTypes.ConsoleApp;
+﻿namespace GenericTypes.ConsoleApp;
 
 // generic constraints - ograniczenia na typ T
 // class - typ referencyjny
@@ -12,21 +10,19 @@ internal class Repository<T> where T : IEntity, new()
 
 	public void AddElement(T element)
 	{
-		T newElement = new();
-		newElement.Id = 23;
+		T newElement = new()
+		{
+			Id = 23
+		};
 
 		if (element != null)
 		{
 			data.Add(element);
-            Console.WriteLine(element.Id);
-        }
+			Console.WriteLine(element.Id);
+		}
 	}
 
-	public T GetElementById(int id)
-	{
-		return data.FirstOrDefault(e => e.Id == id);
-	}
-
+	public T GetElementById(int id) => data.FirstOrDefault(e => e.Id == id);
 
 	public T GetElement(int index)
 	{
@@ -43,8 +39,8 @@ internal class Repository<T> where T : IEntity, new()
 }
 
 // można nakładać ograniczenia na każdy typ z osobna, dla każdego z nich trzeba użyć słowa kluczowego where
-internal class Repository<TKey, TValue> 
-	where TKey : class 
+internal class Repository<TKey, TValue>
+	where TKey : class
 	where TValue : new()
 {
 	private readonly Dictionary<TKey, TValue> data = new();

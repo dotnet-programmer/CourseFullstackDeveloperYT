@@ -34,7 +34,7 @@ internal class PhoneBook
 		if (contact != null)
 		{
 			Contacts.Remove(contact);
-            Console.WriteLine("The contact has been removed.");
+			Console.WriteLine("The contact has been removed.");
 		}
 		Console.WriteLine("There is no such contact for the given number!");
 	}

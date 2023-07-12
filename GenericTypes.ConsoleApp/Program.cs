@@ -1,12 +1,16 @@
 ﻿using GenericTypes.ConsoleApp;
 
 List<Restaurant> restaurants = new();
-PaginatedResult<Restaurant> restaurantsResults = new();
-restaurantsResults.Results = restaurants;
+PaginatedResult<Restaurant> restaurantsResults = new()
+{
+	Results = restaurants
+};
 
 List<User> users = new();
-PaginatedResult<User> userResults = new();
-userResults.Results = users;
+PaginatedResult<User> userResults = new()
+{
+	Results = users
+};
 
 //************************************************************************************
 
@@ -17,7 +21,7 @@ userResults.Results = users;
 Repository<User> userRepository2 = new();
 
 Repository<string, User> userRepository = new();
-userRepository.AddElement("Bill", new User() { Name = "Bill"});
+userRepository.AddElement("Bill", new User() { Name = "Bill" });
 User user = userRepository.GetElement("Bill");
 
 //************************************************************************************
@@ -31,10 +35,7 @@ Console.WriteLine(string.Join(' ', intArray));
 //Display display = Console.WriteLine;
 
 Display display = WriteWithComma;
-void WriteWithComma(string value)
-{
-	Console.Write(value + ", ");
-}
+void WriteWithComma(string value) => Console.Write(value + ", ");
 
 Display display2 = (string value) => Console.Write(value + ", ");
 
@@ -56,7 +57,7 @@ void DisplayNumbers(IEnumerable<int> numbers, Display display)
 	{
 		//Console.WriteLine(number);
 		display(number.ToString());
-    }
+	}
 }
 
 int Count<T>(IEnumerable<T> elements, GenericPredicate<T> predicate)
@@ -73,8 +74,8 @@ int Count<T>(IEnumerable<T> elements, GenericPredicate<T> predicate)
 	return count;
 }
 
-
 public delegate void Display(string value);
+
 public delegate bool GenericPredicate<T>(T value);
 
 // wbudowane generyczne delegaty:

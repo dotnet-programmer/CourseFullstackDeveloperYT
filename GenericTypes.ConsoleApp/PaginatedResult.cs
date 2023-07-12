@@ -16,20 +16,21 @@ public class Restaurant : IEntity
 
 public class User : IEntity
 {
-    public User()
-    {
-		
-    }
-    public User(string name, int id)
-    {
-        Name = name;
+	public User()
+	{
+	}
+
+	public User(string name, int id)
+	{
+		Name = name;
 		Id = id;
-    }
-    public string Name { get; set; }
+	}
+
+	public string Name { get; set; }
 	public int Id { get; set; }
 }
 
 public interface IEntity
 {
-    int Id { get; set; }
+	int Id { get; set; }
 }

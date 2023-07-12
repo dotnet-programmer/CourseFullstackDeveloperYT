@@ -47,6 +47,6 @@ while (true)
 			Console.WriteLine("Invalid operation");
 			break;
 	}
-    Console.Write("Select operation: ");
-    userInput = Console.ReadLine();
+	Console.Write("Select operation: ");
+	userInput = Console.ReadLine();
 }
