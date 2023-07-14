@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericTypes.ConsoleApp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqTraining.ConsoleApp", "LinqTraining.ConsoleApp\LinqTraining.ConsoleApp.csproj", "{93DDEDC9-FF6C-460C-B685-19340003898E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncProgramming.WpfApp", "AsyncProgramming.WpfApp\AsyncProgramming.WpfApp.csproj", "{E8232AB4-10DB-4C71-9EF0-6A01DB501888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncProgramming.WpfApp", "AsyncProgramming.WpfApp\AsyncProgramming.WpfApp.csproj", "{E8232AB4-10DB-4C71-9EF0-6A01DB501888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncProgramming.ConsoleApp", "AsyncProgramming.ConsoleApp\AsyncProgramming.ConsoleApp.csproj", "{BB7BC9F3-5FF7-4A25-ACEE-2FEDB775209C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncProgramming.ConsoleApp", "AsyncProgramming.ConsoleApp\AsyncProgramming.ConsoleApp.csproj", "{BB7BC9F3-5FF7-4A25-ACEE-2FEDB775209C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidPrinciples.ConsoleApp", "SolidPrinciples.ConsoleApp\SolidPrinciples.ConsoleApp.csproj", "{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{BB7BC9F3-5FF7-4A25-ACEE-2FEDB775209C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB7BC9F3-5FF7-4A25-ACEE-2FEDB775209C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB7BC9F3-5FF7-4A25-ACEE-2FEDB775209C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
