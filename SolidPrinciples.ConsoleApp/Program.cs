@@ -24,3 +24,5 @@
 // szczegóły, czyli jakieś konkretne implementacje powinny również zależeć od abstrakcji
 // ta zasada odwraca sposób w jakim można myśleć o programowaniu obiektowym
 // ideą tej zasady jest to że podczas projektowania interakcji między modułem wysokiego poziomu a modułem niskiego poziomu, interakcję należy traktować jako abstrakcyjną interakcję między nimi
+
+Console.WriteLine();

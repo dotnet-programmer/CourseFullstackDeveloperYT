@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncProgramming.WpfApp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncProgramming.ConsoleApp", "AsyncProgramming.ConsoleApp\AsyncProgramming.ConsoleApp.csproj", "{BB7BC9F3-5FF7-4A25-ACEE-2FEDB775209C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidPrinciples.ConsoleApp", "SolidPrinciples.ConsoleApp\SolidPrinciples.ConsoleApp.csproj", "{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidPrinciples.ConsoleApp", "SolidPrinciples.ConsoleApp\SolidPrinciples.ConsoleApp.csproj", "{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.ConsoleApp", "ProjectPatterns.ConsoleApp\DesignPatterns.ConsoleApp.csproj", "{0EB05577-EC06-4B7E-9D35-14BE9BDBF581}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF662B9A-EF3B-4DB4-AE9E-BF654EAFAF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB05577-EC06-4B7E-9D35-14BE9BDBF581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB05577-EC06-4B7E-9D35-14BE9BDBF581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB05577-EC06-4B7E-9D35-14BE9BDBF581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB05577-EC06-4B7E-9D35-14BE9BDBF581}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
