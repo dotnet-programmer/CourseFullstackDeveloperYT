@@ -15,6 +15,5 @@ public class Person
 
 	//public void Work([DisplayProperty("value")] string value)
 	//{
-
 	//}
 }

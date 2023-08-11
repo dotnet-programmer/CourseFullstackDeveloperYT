@@ -1,5 +1,5 @@
-﻿using ReflectionAndAttributes.ConsoleApp;
-using System.Reflection;
+﻿using System.Reflection;
+using ReflectionAndAttributes.ConsoleApp;
 
 static void Display(object obj)
 {
@@ -10,8 +10,8 @@ static void Display(object obj)
 	{
 		var propValue = property.GetValue(obj);
 		var propType = propValue.GetType();
-        if (propType.IsPrimitive || propType == typeof(string))
-        {
+		if (propType.IsPrimitive || propType == typeof(string))
+		{
 			var displayPropertyAttribute = property.GetCustomAttribute<DisplayPropertyAttribute>();
 			//Console.WriteLine($"{(displayPropertyAttribute != null ? displayPropertyAttribute.DisplayName : property.Name)}: {propValue}");
 			Console.WriteLine($"{displayPropertyAttribute?.DisplayName ?? property.Name}: {propValue}");
@@ -19,14 +19,14 @@ static void Display(object obj)
 	}
 }
 
-Address address = new Address()
+Address address = new()
 {
 	City = "Krakow",
 	PostalCode = "31-556",
 	Street = "Grodzka 5"
 };
 
-Person person = new Person()
+Person person = new()
 {
 	FirstName = "John",
 	LastName = "Doe",

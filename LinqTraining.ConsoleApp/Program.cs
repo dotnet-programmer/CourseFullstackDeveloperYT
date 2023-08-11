@@ -1,7 +1,7 @@
-﻿using CsvHelper;
-using LinqTraining.ConsoleApp;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text.Json;
+using CsvHelper;
+using LinqTraining.ConsoleApp;
 using Type = LinqTraining.ConsoleApp.Type;
 
 internal class Program
@@ -49,27 +49,27 @@ internal class Program
 		//}
 
 		var joinedData = people.Join(
-			addresses, 
-			p => p.Id, 
-			a => a.PersonId, 
+			addresses,
+			p => p.Id,
+			a => a.PersonId,
 			(person, address) => new { person.Name, address.Street, address.City });
 		foreach (var element in joinedData)
 		{
-            Console.WriteLine($"Name: {element.Name}, address: {element.City}, {element.Street}");
-        }
+			Console.WriteLine($"Name: {element.Name}, address: {element.City}, {element.Street}");
+		}
 
 		var groupJoinedData = people.GroupJoin(
 			addresses,
 			p => p.Id,
 			a => a.PersonId,
-			(person, addresses) => new { person.Name, Addresses = addresses});
+			(person, addresses) => new { person.Name, Addresses = addresses });
 		foreach (var element in groupJoinedData)
 		{
 			Console.Write($"Name: {element.Name}");
 			foreach (var address in element.Addresses)
 			{
-                Console.WriteLine($"\t City: {address.City}, street: {address.Street}");
-            }
+				Console.WriteLine($"\t City: {address.City}, street: {address.Street}");
+			}
 		}
 	}
 

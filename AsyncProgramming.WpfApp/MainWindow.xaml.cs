@@ -20,7 +20,7 @@ public partial class MainWindow : Window
 		ResultLabel.Content = "Start";
 
 		// synchroniczne opóźnienie - blokuje wątek główny
-		// Thread.Sleep(3000); 
+		// Thread.Sleep(3000);
 
 		// asynchroniczne wstrzymanie wykonania - nie blokuje wątku głównego
 		await Task.Delay(3000);
@@ -29,6 +29,7 @@ public partial class MainWindow : Window
 	}
 
 	#region synchronous version
+
 	private void Read_Files_Handler(object sender, RoutedEventArgs e)
 	{
 		ResultLabel.Content = "Reading started:";
@@ -52,9 +53,11 @@ public partial class MainWindow : Window
 			}
 		}
 	}
+
 	#endregion synchronous version
 
 	#region asynchronous 1 - no return value
+
 	private async void Read_Files_Async_Handler1(object sender, RoutedEventArgs e)
 	{
 		ResultLabel.Content = "Reading started:";
@@ -83,9 +86,11 @@ public partial class MainWindow : Window
 			}
 		}
 	}
+
 	#endregion asynchronous 1 - no return value
 
 	#region asynchronous 2 - with return value
+
 	private async void Read_Files_Async_Handler2(object sender, RoutedEventArgs e)
 	{
 		ResultLabel.Content = "Reading started:";
@@ -112,9 +117,11 @@ public partial class MainWindow : Window
 		}
 		return totalLength;
 	}
+
 	#endregion asynchronous 2 - with return value
 
 	#region asynchronous 3 - with parallel tasks
+
 	private async void Read_Files_Async_Handler3(object sender, RoutedEventArgs e)
 	{
 		ResultLabel.Content = "Reading started:";
@@ -148,5 +155,6 @@ public partial class MainWindow : Window
 		await Task.WhenAll(tasks);
 		return totalLength;
 	}
+
 	#endregion asynchronous 3 - with parallel tasks
 }

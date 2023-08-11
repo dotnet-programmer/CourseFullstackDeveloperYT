@@ -21,9 +21,10 @@ internal class Application
 			}
 		}
 	}
-	private void RenderCircle(CircleBad circle) => Console.WriteLine("Render circle...");
-	private void RenderRectangle(RectangleBad rectangle) => Console.WriteLine("Render rectangle...");
 
+	private void RenderCircle(CircleBad circle) => Console.WriteLine("Render circle...");
+
+	private void RenderRectangle(RectangleBad rectangle) => Console.WriteLine("Render rectangle...");
 
 	// to jest dobre rozwiązanie - użycie polimorfizmu
 	// można dodać dowolną ilosć nowych kształtów bez zmian w sposobie działania tego kodu

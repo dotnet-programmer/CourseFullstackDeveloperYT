@@ -31,16 +31,13 @@ internal class Invoice
 	// złe rozwiązanie, klasa teraz przechowuje dane i zarządza wyświetlaniem ich
 	public void Display()
 	{
-        Console.WriteLine($"Vendor: {Vendor}");
-        Console.WriteLine($"Vendee: {Vendee}");
-        Console.WriteLine($"Total: {Total}");
-    }
+		Console.WriteLine($"Vendor: {Vendor}");
+		Console.WriteLine($"Vendee: {Vendee}");
+		Console.WriteLine($"Total: {Total}");
+	}
 
 	// złe rozwiązanie, klasa teraz przechowuje dane i zapisuje dane do pdf
-	public void SaveToPdf()
-	{
-        Console.WriteLine("Saving to PDF...");
-    }
+	public void SaveToPdf() => Console.WriteLine("Saving to PDF...");
 
 	// w takiej postaci klasa Invoice ma 3 odpowiedzialności, przez co są 3 powody do zmiany:
 	// 1) przechowywanie/agregacja danych

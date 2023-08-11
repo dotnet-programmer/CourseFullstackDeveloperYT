@@ -9,8 +9,8 @@ internal class ScanFacade
 
 	public void Scan(string githubUrl)
 	{
-        Console.WriteLine($"Scanning {githubUrl}");
-        var qualityScanErrors = _qualityScanner.QualityScan(githubUrl);
+		Console.WriteLine($"Scanning {githubUrl}");
+		var qualityScanErrors = _qualityScanner.QualityScan(githubUrl);
 		var securityScanErrors = _securityScanner.SecurityScan(githubUrl);
 		var dependencyScanErrors = _dependencyScanner.DependencyScan(githubUrl);
 

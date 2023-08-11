@@ -24,11 +24,9 @@ internal class Program
 	//	}
 	//}
 
-
-
 	private static string userAnswer;
 
-	static async Task Main(string[] args)
+	private static async Task Main(string[] args)
 	{
 		Console.WriteLine("Main started");
 		var tokenSource = new CancellationTokenSource(1000);
@@ -45,7 +43,7 @@ internal class Program
 		Console.ReadKey();
 	}
 
-	static Task<string> GetAnswer()
+	private static Task<string> GetAnswer()
 	{
 		Console.WriteLine("Your answer:");
 		userAnswer = Console.ReadLine();

@@ -7,11 +7,10 @@ using DesignPatterns.ConsoleApp.Strategy;
 
 // Można wyróżnić 3 podstawowe kategorie wzorców projektowych:
 // Kreacyjne - tworzenie obiektów w elastyczny sposób przez reużywalny kod
-// Strukturalne - zdefiniowanie referencji między obiektami tak aby kod był jak najbardziej rozszerzalny  
+// Strukturalne - zdefiniowanie referencji między obiektami tak aby kod był jak najbardziej rozszerzalny
 // Behavioralne - zajmują się komunikacją oraz podziałem odpowiedzialności pomiędzy obiektami
 
-
-// Wzorzec Strategia 
+// Wzorzec Strategia
 
 // Cel:
 // Behawioralny wzorzec projektowy, który definiuje rodzinę wymiennych algorytmów i kapsułkuje je w postaci klas.
@@ -26,14 +25,11 @@ using DesignPatterns.ConsoleApp.Strategy;
 // class Map -> _routeStrategy : IRouteStrategy; CreateRoute(Coordinate, Coordinate) { tutaj wywołanie metody CreateRoute z obiektu IRouteStrategy }
 // dla każdego środka transportu utworzyć osobne klasy, które będą implementować interfejs IRouteStrategy
 
-
-
 BikeStrategy bikeStrategy = new();
 Map map = new(bikeStrategy);
 Coordinate start = new();
 Coordinate end = new();
 map.CreateRoute(start, end);
-
 
 // Wzorzec Fabryka
 
@@ -54,7 +50,6 @@ Shape circle = shapeFactory.CreateShape(ShapeType.Circle);
 circle.Render();
 Shape triangle = shapeFactory.CreateShape(ShapeType.Triangle);
 triangle.Render();
-
 
 // Wzorzec Fasada
 

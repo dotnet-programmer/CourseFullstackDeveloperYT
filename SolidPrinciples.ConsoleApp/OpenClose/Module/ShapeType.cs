@@ -38,13 +38,15 @@ internal class RectangleBad : ShapeBadSolution
 // dobre rozwiązanie - metoda wirtualna
 internal class Shape
 {
-	public virtual void Render() { }
+	public virtual void Render()
+	{ }
 }
 
 internal class Circle : Shape
 {
 	public int Radius { get; set; }
 	public Point Center { get; set; }
+
 	public override void Render() => Console.Write("Render Circle...");
 }
 
@@ -53,5 +55,6 @@ internal class Rectangle : Shape
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public Point TopLeft { get; set; }
+
 	public override void Render() => Console.Write("Render Rectangle...");
 }
