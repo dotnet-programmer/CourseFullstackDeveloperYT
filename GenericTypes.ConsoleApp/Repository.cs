@@ -6,7 +6,7 @@
 // IEntity - typ musi implementować interfejs IEntity
 internal class Repository<T> where T : IEntity, new()
 {
-	private readonly List<T> data = new();
+	private readonly List<T> _data = [];
 
 	public void AddElement(T element)
 	{
@@ -17,18 +17,19 @@ internal class Repository<T> where T : IEntity, new()
 
 		if (element != null)
 		{
-			data.Add(element);
+			_data.Add(element);
 			Console.WriteLine(element.Id);
 		}
 	}
 
-	public T GetElementById(int id) => data.FirstOrDefault(e => e.Id == id);
+	public T GetElementById(int id) 
+		=> _data.FirstOrDefault(e => e.Id == id);
 
 	public T GetElement(int index)
 	{
-		if (index < data.Count)
+		if (index < _data.Count)
 		{
-			return data[index];
+			return _data[index];
 		}
 		else
 		{
@@ -43,25 +44,16 @@ internal class Repository<TKey, TValue>
 	where TKey : class
 	where TValue : new()
 {
-	private readonly Dictionary<TKey, TValue> data = new();
+	private readonly Dictionary<TKey, TValue> _data = [];
 
 	public void AddElement(TKey key, TValue element)
 	{
 		if (element != null)
 		{
-			data.Add(key, element);
+			_data.Add(key, element);
 		}
 	}
 
-	public TValue GetElement(TKey key)
-	{
-		if (data.TryGetValue(key, out TValue result))
-		{
-			return result;
-		}
-		else
-		{
-			return default;
-		}
-	}
+	public TValue GetElement(TKey key) 
+		=> _data.TryGetValue(key, out TValue result) ? result : default;
 }

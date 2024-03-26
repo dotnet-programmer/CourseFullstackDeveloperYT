@@ -1,12 +1,12 @@
 ﻿using GenericTypes.ConsoleApp;
 
-List<Restaurant> restaurants = new();
+List<Restaurant> restaurants = [];
 PaginatedResult<Restaurant> restaurantsResults = new()
 {
 	Results = restaurants
 };
 
-List<User> users = new();
+List<User> users = [];
 PaginatedResult<User> userResults = new()
 {
 	Results = users
@@ -26,7 +26,7 @@ User user = userRepository.GetElement("Bill");
 
 //************************************************************************************
 
-int[] intArray = { 1, 3, 5 };
+int[] intArray = [1, 3, 5];
 Utils.Swap(ref intArray[0], ref intArray[2]);
 Console.WriteLine(string.Join(' ', intArray));
 
@@ -35,19 +35,20 @@ Console.WriteLine(string.Join(' ', intArray));
 //Display display = Console.WriteLine;
 
 Display display = WriteWithComma;
-void WriteWithComma(string value) => Console.Write(value + ", ");
+void WriteWithComma(string value) 
+	=> Console.Write(value + ", ");
 
 Display display2 = (string value) => Console.Write(value + ", ");
 
 display("Test"); // uruchomienie Console.WriteLine z argumentem "Test"
 
-int[] numbers = { 10, 20, 30 };
+int[] numbers = [10, 20, 30];
 DisplayNumbers(numbers, display);
 
 int count = Count(numbers, (int value) => value > 15);
 Console.WriteLine(count);
 
-string[] strings = { "Generic", "Delegate", "Test" };
+string[] strings = ["Generic", "Delegate", "Test"];
 int countStrings = Count(strings, value => value.Length > 4);
 Console.WriteLine(countStrings);
 

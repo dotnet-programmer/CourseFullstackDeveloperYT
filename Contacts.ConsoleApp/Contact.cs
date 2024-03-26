@@ -1,15 +1,10 @@
 ﻿namespace Contacts.ConsoleApp;
 
-internal class Contact
+internal class Contact(string name, string phoneNumber)
 {
-	public Contact(string name, string phoneNumber)
-	{
-		Name = name;
-		PhoneNumber = phoneNumber;
-	}
+	public string Name { get; private set; } = name;
+	public string PhoneNumber { get; private set; } = phoneNumber;
 
-	public string Name { get; private set; }
-	public string PhoneNumber { get; private set; }
-
-	public override string ToString() => Name + " " + PhoneNumber;
+	public override string ToString()
+		=> Name + " " + PhoneNumber;
 }

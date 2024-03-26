@@ -2,5 +2,6 @@
 
 internal class Rectangle : Shape
 {
-	public override void Render() => Console.WriteLine("Render Rectangle");
+	public override void Render()
+		=> Console.WriteLine("Render Rectangle");
 }

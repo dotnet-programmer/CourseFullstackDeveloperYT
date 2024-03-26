@@ -7,7 +7,8 @@ internal class ContactsManager
 	private List<Contact> _contacts;
 	private readonly string _filePath = Path.Combine(Environment.ExpandEnvironmentVariables("%LOCALAPPDATA%"), "ContactsApp", "Contacts.json");
 
-	public ContactsManager() => ReadContacts();
+	public ContactsManager()
+		=> ReadContacts();
 
 	public void AddContact(string name, string phoneNumber)
 	{
@@ -25,9 +26,11 @@ internal class ContactsManager
 		return "There is no such contact for the given number!";
 	}
 
-	public string GetAllContacts() => GetElementsFromList(_contacts, "Empty list.");
+	public string GetAllContacts()
+		=> GetElementsFromList(_contacts, "Empty list.");
 
-	public string GetContactsByName(string name) => GetElementsFromList(_contacts.FindAll(x => x.Name.Contains(name, StringComparison.CurrentCultureIgnoreCase)), "There is no such contact for the given name!");
+	public string GetContactsByName(string name)
+		=> GetElementsFromList(_contacts.FindAll(x => x.Name.Contains(name, StringComparison.CurrentCultureIgnoreCase)), "There is no such contact for the given name!");
 
 	public string DeleteContact(string phoneNumber)
 	{
@@ -41,11 +44,14 @@ internal class ContactsManager
 		return "There is no such contact for the given number!";
 	}
 
-	private string GetRawNumber(string phoneNumber) => phoneNumber.Replace(" ", "").Replace("-", "").Replace(".", "").Replace("/", "").Replace("\\", "");
+	private string GetRawNumber(string phoneNumber)
+		=> phoneNumber.Replace(" ", "").Replace("-", "").Replace(".", "").Replace("/", "").Replace("\\", "");
 
-	private string GetElementsFromList(List<Contact> collection, string emptyListMessage) => collection.Any() ? string.Join(Environment.NewLine, collection) : emptyListMessage;
+	private string GetElementsFromList(List<Contact> collection, string emptyListMessage)
+		=> collection.Count != 0 ? string.Join(Environment.NewLine, collection) : emptyListMessage;
 
-	private void ReadContacts() => _contacts = File.Exists(_filePath) ? JsonSerializer.Deserialize<List<Contact>>(File.ReadAllText(_filePath)) : new List<Contact>();
+	private void ReadContacts()
+		=> _contacts = File.Exists(_filePath) ? JsonSerializer.Deserialize<List<Contact>>(File.ReadAllText(_filePath)) : [];
 
 	private void SaveContacts()
 	{

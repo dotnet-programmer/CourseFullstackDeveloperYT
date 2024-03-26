@@ -2,5 +2,6 @@
 
 internal class Circle : Shape
 {
-	public override void Render() => Console.WriteLine("Render Circle");
+	public override void Render()
+		=> Console.WriteLine("Render Circle");
 }

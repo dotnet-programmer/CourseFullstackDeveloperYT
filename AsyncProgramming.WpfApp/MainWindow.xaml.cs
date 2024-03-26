@@ -12,7 +12,8 @@ namespace AsyncProgramming.WpfApp;
 /// </summary>
 public partial class MainWindow : Window
 {
-	public MainWindow() => InitializeComponent();
+	public MainWindow()
+		=> InitializeComponent();
 
 	// opóźnienie wykonania
 	private async void Delay_Handler(object sender, RoutedEventArgs e)
@@ -135,7 +136,7 @@ public partial class MainWindow : Window
 	{
 		var filesPath = "D:/files/";
 		var totalLength = 0;
-		List<Task> tasks = new();
+		List<Task> tasks = [];
 		for (int i = 1; i <= 5; i++)
 		{
 			var filePath = filesPath + $"{i}.txt";

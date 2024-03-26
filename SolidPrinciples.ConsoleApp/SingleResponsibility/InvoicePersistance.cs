@@ -2,11 +2,10 @@
 
 // klasa InvoicePersistance ma tylko 1 odpowiedzialność - zapis danych do pliku
 
-internal class InvoicePersistance
+internal class InvoicePersistance(Invoice invoice)
 {
-	private readonly Invoice _invoice;
+	private readonly Invoice _invoice = invoice;
 
-	public InvoicePersistance(Invoice invoice) => _invoice = invoice;
-
-	public void SaveToPdf() => Console.WriteLine("Saving to PDF...");
+	public void SaveToPdf()
+		=> Console.WriteLine("Saving to PDF...");
 }

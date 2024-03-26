@@ -38,14 +38,7 @@ bool TryParseToNegativeInt(string input, out int result)
 {
 	if (int.TryParse(input, out result))
 	{
-		if (result < 0)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return result < 0;
 	}
 	else
 	{

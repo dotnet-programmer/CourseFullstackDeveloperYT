@@ -14,12 +14,13 @@ public class GoogleApp
 	public List<string> Genres { get; set; }
 	public DateTime LastUpdated { get; set; }
 
-	public override string ToString() => $"{(Name.Length > 25 ? Name.Substring(0, 25) + "..." : Name),-28} | " +
-		$"{Category,-20} | " +
-		$"{Rating,-3} | " +
-		$"{Reviews,-10} | " +
-		$"{Type,-4} | " +
-		$"{Price,-7} | " +
-		$"{LastUpdated.ToShortDateString(),-10} | " +
-		$"{string.Join(", ", Genres)}";
+	public override string ToString()
+		=> $"{(Name.Length > 25 ? Name.Substring(0, 25) + "..." : Name),-28} | " +
+			$"{Category,-20} | " +
+			$"{Rating,-3} | " +
+			$"{Reviews,-10} | " +
+			$"{Type,-4} | " +
+			$"{Price,-7} | " +
+			$"{LastUpdated.ToShortDateString(),-10} | " +
+			$"{string.Join(", ", Genres)}";
 }

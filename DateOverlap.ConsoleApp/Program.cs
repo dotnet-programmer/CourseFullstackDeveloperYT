@@ -14,14 +14,7 @@ DateTime endDate = DateTime.ParseExact(endDateString, "yyyy-MM-dd", null);
 
 bool isNewReservationPossible = IsNewReservationPossible(startDate, endDate, bookedReservations);
 
-if (isNewReservationPossible)
-{
-	Console.WriteLine("Reservation booked");
-}
-else
-{
-	Console.WriteLine("Select other booking dates");
-}
+Console.WriteLine(isNewReservationPossible ? "Reservation booked" : "Select other booking dates");
 
 static bool IsNewReservationPossible(DateTime startDate, DateTime endDate, List<Reservation> bookedReservations)
 {
@@ -46,15 +39,10 @@ static void DisplayReservations(List<Reservation> bookedReservations)
 	}
 }
 
-static List<Reservation> GetBookedReservations()
-{
-	var reservations = new List<Reservation>()
-	{
+static List<Reservation> GetBookedReservations() 
+	=> [
 		new Reservation(new DateTime(2021, 6, 10), new DateTime(2021, 6, 12)),
 		new Reservation(new DateTime(2021, 6, 19), new DateTime(2021, 6, 20)),
 		new Reservation(new DateTime(2021, 6, 24), new DateTime(2021, 6, 26)),
 		new Reservation(new DateTime(2021, 7, 24), new DateTime(2021, 7, 25)),
-	};
-
-	return reservations;
-}
+	];

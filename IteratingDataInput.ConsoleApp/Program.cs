@@ -20,11 +20,4 @@ while (true)
 }
 
 Console.WriteLine($"Sum = {sum}");
-if (max != null)
-{
-	Console.WriteLine($"Max = {max}");
-}
-else
-{
-	Console.WriteLine("No values inserted");
-}
+Console.WriteLine(max != null ? $"Max = {max}" : "No values inserted");

@@ -24,7 +24,7 @@ internal class Program
 	//	}
 	//}
 
-	private static string userAnswer;
+	private static string _userAnswer;
 
 	private static async Task Main(string[] args)
 	{
@@ -46,7 +46,7 @@ internal class Program
 	private static Task<string> GetAnswer()
 	{
 		Console.WriteLine("Your answer:");
-		userAnswer = Console.ReadLine();
-		return Task.FromResult(userAnswer);
+		_userAnswer = Console.ReadLine();
+		return Task.FromResult(_userAnswer);
 	}
 }

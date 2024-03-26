@@ -6,9 +6,6 @@ namespace SolidPrinciples.ConsoleApp.SingleResponsibility;
 internal class Invoice
 {
 	public IEnumerable<LineItem> LineItems { get; set; }
-	public string Vendor { get; set; }
-	public string Vendee { get; set; }
-	public decimal Total { get; set; }
 
 	public Invoice(IEnumerable<LineItem> lineItems, string vendor, string vendee)
 	{
@@ -17,6 +14,10 @@ internal class Invoice
 		Vendee = vendee;
 		Total = CalculateTotal();
 	}
+
+	public string Vendor { get; set; }
+	public string Vendee { get; set; }
+	public decimal Total { get; set; }
 
 	public decimal CalculateTotal()
 	{
@@ -37,7 +38,8 @@ internal class Invoice
 	}
 
 	// złe rozwiązanie, klasa teraz przechowuje dane i zapisuje dane do pdf
-	public void SaveToPdf() => Console.WriteLine("Saving to PDF...");
+	public void SaveToPdf() 
+		=> Console.WriteLine("Saving to PDF...");
 
 	// w takiej postaci klasa Invoice ma 3 odpowiedzialności, przez co są 3 powody do zmiany:
 	// 1) przechowywanie/agregacja danych

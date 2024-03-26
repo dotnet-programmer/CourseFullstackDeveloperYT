@@ -36,5 +36,6 @@ internal class AuthenticationManager
 	// można wstrzyknąć tą klasę przez konstruktor, przez metodę lub przez właściwość
 	// najpopularniejszym mechanizmem jest wstrzyknięcie przez konstruktor:
 	// tworząc obiekt klasy AuthenticationManager do konstruktora przekazuje się obiekt konkretnej klasy implementującej wymagany interfejs
-	public AuthenticationManager(INotificationSender notificationSender) => _notificationSender = notificationSender;
+	public AuthenticationManager(INotificationSender notificationSender) 
+		=> _notificationSender = notificationSender;
 }

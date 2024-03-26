@@ -4,5 +4,6 @@ namespace SolidPrinciples.ConsoleApp.OpenClose;
 
 internal class InvoiceToWord : IInvoiceSaver
 {
-	public void Save(Invoice invoice) => Console.WriteLine("Saving invoice as word");
+	public void Save(Invoice invoice)
+		=> Console.WriteLine("Saving invoice as word");
 }

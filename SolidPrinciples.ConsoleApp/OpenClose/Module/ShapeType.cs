@@ -47,7 +47,8 @@ internal class Circle : Shape
 	public int Radius { get; set; }
 	public Point Center { get; set; }
 
-	public override void Render() => Console.Write("Render Circle...");
+	public override void Render()
+		=> Console.Write("Render Circle...");
 }
 
 internal class Rectangle : Shape
@@ -56,5 +57,6 @@ internal class Rectangle : Shape
 	public int Height { get; set; }
 	public Point TopLeft { get; set; }
 
-	public override void Render() => Console.Write("Render Rectangle...");
+	public override void Render()
+		=> Console.Write("Render Rectangle...");
 }

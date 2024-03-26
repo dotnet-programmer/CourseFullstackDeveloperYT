@@ -2,11 +2,9 @@
 
 // klasa InvoiceLogger ma tylko 1 odpowiedzialność - wyświetlanie danych
 
-internal class InvoiceLogger
+internal class InvoiceLogger(Invoice invoice)
 {
-	private readonly Invoice _invoice;
-
-	public InvoiceLogger(Invoice invoice) => _invoice = invoice;
+	private readonly Invoice _invoice = invoice;
 
 	public void Display()
 	{
