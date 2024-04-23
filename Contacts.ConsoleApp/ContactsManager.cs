@@ -4,8 +4,9 @@ namespace Contacts.ConsoleApp;
 
 internal class ContactsManager
 {
-	private List<Contact> _contacts;
 	private readonly string _filePath = Path.Combine(Environment.ExpandEnvironmentVariables("%LOCALAPPDATA%"), "ContactsApp", "Contacts.json");
+
+	private List<Contact> _contacts;
 
 	public ContactsManager()
 		=> ReadContacts();
@@ -48,10 +49,14 @@ internal class ContactsManager
 		=> phoneNumber.Replace(" ", "").Replace("-", "").Replace(".", "").Replace("/", "").Replace("\\", "");
 
 	private string GetElementsFromList(List<Contact> collection, string emptyListMessage)
-		=> collection.Count != 0 ? string.Join(Environment.NewLine, collection) : emptyListMessage;
+		=> collection.Count != 0 
+			? string.Join(Environment.NewLine, collection) 
+			: emptyListMessage;
 
 	private void ReadContacts()
-		=> _contacts = File.Exists(_filePath) ? JsonSerializer.Deserialize<List<Contact>>(File.ReadAllText(_filePath)) : [];
+		=> _contacts = File.Exists(_filePath)
+			? JsonSerializer.Deserialize<List<Contact>>(File.ReadAllText(_filePath))
+			: [];
 
 	private void SaveContacts()
 	{

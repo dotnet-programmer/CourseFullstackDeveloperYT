@@ -38,7 +38,7 @@ internal class Invoice
 	}
 
 	// złe rozwiązanie, klasa teraz przechowuje dane i zapisuje dane do pdf
-	public void SaveToPdf() 
+	public void SaveToPdf()
 		=> Console.WriteLine("Saving to PDF...");
 
 	// w takiej postaci klasa Invoice ma 3 odpowiedzialności, przez co są 3 powody do zmiany:

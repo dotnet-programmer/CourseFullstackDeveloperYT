@@ -3,10 +3,10 @@
 internal class CityDuck : Duck
 {
 	public override void Quack()
-		=> Console.Write("City duck swim");
+		=> Console.Write("City duck quack");
 
 	public override void Swim()
-		=> Console.Write("City duck quack");
+		=> Console.Write("City duck swim");
 
 	public override void Fly()
 		=> Console.Write("City duck fly");
