@@ -35,7 +35,7 @@ Console.WriteLine(string.Join(' ', intArray));
 //Display display = Console.WriteLine;
 
 Display display = WriteWithComma;
-void WriteWithComma(string value) 
+void WriteWithComma(string value)
 	=> Console.Write(value + ", ");
 
 Display display2 = (string value) => Console.Write(value + ", ");

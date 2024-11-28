@@ -4,7 +4,7 @@ internal class PhoneBook
 {
 	public List<Contact> Contacts { get; set; } = [];
 
-	public void AddContact(Contact contact) 
+	public void AddContact(Contact contact)
 		=> Contacts.Add(contact);
 
 	public void DisplayContact(string number)
@@ -21,7 +21,7 @@ internal class PhoneBook
 		}
 	}
 
-	public void DisplayAllContacts() 
+	public void DisplayAllContacts()
 		=> DisplayContactsDetails(Contacts);
 
 	public void DisplayMatchingContacts(string searchPhrase)
@@ -41,7 +41,7 @@ internal class PhoneBook
 		Console.WriteLine("There is no such contact for the given number!");
 	}
 
-	private void DisplayContactDetails(Contact contact) 
+	private void DisplayContactDetails(Contact contact)
 		=> Console.WriteLine($"Contact: {contact.Name}, {contact.Number}");
 
 	private void DisplayContactsDetails(List<Contact> contacts)

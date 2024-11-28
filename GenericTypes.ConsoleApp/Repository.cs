@@ -22,7 +22,7 @@ internal class Repository<T> where T : IEntity, new()
 		}
 	}
 
-	public T GetElementById(int id) 
+	public T GetElementById(int id)
 		=> _data.FirstOrDefault(e => e.Id == id);
 
 	public T GetElement(int index)
@@ -54,6 +54,6 @@ internal class Repository<TKey, TValue>
 		}
 	}
 
-	public TValue GetElement(TKey key) 
+	public TValue GetElement(TKey key)
 		=> _data.TryGetValue(key, out TValue result) ? result : default;
 }

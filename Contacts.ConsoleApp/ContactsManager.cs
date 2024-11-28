@@ -49,8 +49,8 @@ internal class ContactsManager
 		=> phoneNumber.Replace(" ", "").Replace("-", "").Replace(".", "").Replace("/", "").Replace("\\", "");
 
 	private string GetElementsFromList(List<Contact> collection, string emptyListMessage)
-		=> collection.Count != 0 
-			? string.Join(Environment.NewLine, collection) 
+		=> collection.Count != 0
+			? string.Join(Environment.NewLine, collection)
 			: emptyListMessage;
 
 	private void ReadContacts()
