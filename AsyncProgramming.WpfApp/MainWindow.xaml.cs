@@ -2,14 +2,12 @@
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
 namespace AsyncProgramming.WpfApp;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
 	public MainWindow()
@@ -20,11 +18,14 @@ public partial class MainWindow : Window
 	{
 		ResultLabel.Content = "Start";
 
+		ResultLabel.Content = "Thread.Sleep(4000);";
 		// synchroniczne opóźnienie - blokuje wątek główny
-		// Thread.Sleep(3000);
+		Thread.Sleep(4000);
 
+
+		ResultLabel.Content = "await Task.Delay(4000);";
 		// asynchroniczne wstrzymanie wykonania - nie blokuje wątku głównego
-		await Task.Delay(3000);
+		await Task.Delay(4000);
 
 		ResultLabel.Content = "Stop";
 	}

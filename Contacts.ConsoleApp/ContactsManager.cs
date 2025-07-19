@@ -20,11 +20,7 @@ internal class ContactsManager
 	public string GetContactByNumber(string phoneNumber)
 	{
 		Contact contact = _contacts.Find(x => x.PhoneNumber == GetRawNumber(phoneNumber));
-		if (contact != null)
-		{
-			return contact.ToString();
-		}
-		return "There is no such contact for the given number!";
+		return contact != null ? contact.ToString() : "There is no such contact for the given number!";
 	}
 
 	public string GetAllContacts()

@@ -9,4 +9,7 @@ internal class Utils
 		first = second;
 		second = temp;
 	}
+
+	public static void Swap2<T>(ref T first, ref T second)
+		=> (first, second) = (second, first);
 }

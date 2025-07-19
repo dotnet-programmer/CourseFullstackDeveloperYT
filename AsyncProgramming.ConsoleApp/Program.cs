@@ -29,7 +29,7 @@ internal class Program
 	private static async Task Main(string[] args)
 	{
 		Console.WriteLine("Main started");
-		var tokenSource = new CancellationTokenSource(1000);
+		CancellationTokenSource tokenSource = new(1000);
 		CancellationToken token = tokenSource.Token;
 
 		var userAnswer = GetAnswer();

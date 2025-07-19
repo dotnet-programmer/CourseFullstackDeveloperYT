@@ -41,8 +41,8 @@ static void DisplayReservations(List<Reservation> bookedReservations)
 
 static List<Reservation> GetBookedReservations()
 	=> [
-		new Reservation(new DateTime(2021, 6, 10), new DateTime(2021, 6, 12)),
-		new Reservation(new DateTime(2021, 6, 19), new DateTime(2021, 6, 20)),
-		new Reservation(new DateTime(2021, 6, 24), new DateTime(2021, 6, 26)),
-		new Reservation(new DateTime(2021, 7, 24), new DateTime(2021, 7, 25)),
+		new(new DateTime(2021, 6, 10), new DateTime(2021, 6, 12)),
+		new(new DateTime(2021, 6, 19), new DateTime(2021, 6, 20)),
+		new(new DateTime(2021, 6, 24), new DateTime(2021, 6, 26)),
+		new(new DateTime(2021, 7, 24), new DateTime(2021, 7, 25)),
 	];
